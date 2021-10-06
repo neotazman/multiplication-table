@@ -6,7 +6,8 @@ Customize this README.md however you want to turn it into documentation for your
 
 ## Project Plan
 
-_(Put your project plan here. It could be pseudocode, an outline-style development plan, etc. But whatever form you choose, it should be detailed enough that another developer could feasibly use it to implement your solution.)_
+1. create a function to do the calculations
+2. create component to place the boxes
 
 ## Reflection
 
