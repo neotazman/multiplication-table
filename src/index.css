@@ -13,10 +13,14 @@ code {
 }
 
 /* Write your CSS here */
+table { /*not working right now*/
+  box-sizing: border-box;
+}
 
+/*to show the cells of the table */
 td {
   outline: 1px solid black;
   height: 2vh;
   width: 2vh;
-  padding: 1vh;
+  padding: auto;
 }

@@ -5,17 +5,24 @@ import Rows from './Rows'
 import './index.css';
 
 function App() {
-  const [input, setInput] = useState(null)
+  const [boxInput, setBoxInput] = useState(null) //the column input
+  const [rowInput, setRowInput] = useState(null) //the row input
 
-  const handleInputChange = (event) => {
+  //had to make the onChange functions seperately because the other way ran into bugs
+  const handleBoxChange = (event) => {
     event.preventDefault()
-    setInput(event.target.value)
+    setBoxInput(event.target.value)
+  }
+  const handleRowChange = (event) => {
+    event.preventDefault()
+    setRowInput(event.target.value)
   }
 
   return(
     <div>
-      <input type='number' placeholder='type table size number' value={input} onChange={handleInputChange}/>
-      <Rows startingValue={0} howManyRows={input} />
+      <input type='number' placeholder='type column number' value={boxInput} onChange={handleBoxChange}/>
+      <input type='number' placeholder='type row number' value={rowInput} onChange={handleRowChange}/>
+      <Rows startingValue={0} howManyRows={rowInput} howManyBoxes={boxInput} />
     </div>
   )
 }
