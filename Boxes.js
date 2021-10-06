@@ -17,7 +17,6 @@ export default function Boxes(props) {
                 })
             }
             </ul>
-
         </div>
     )
 }
