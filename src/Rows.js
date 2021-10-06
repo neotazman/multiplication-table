@@ -10,6 +10,7 @@ export default function Rows(props) { //had to make separate components to rende
     return (
         <div>
             <table>
+                <Boxes startingValue={1} howManyBoxes={howManyBoxes}/* to show the factors */ />
                 { //the mapping is why i'm using react
                     inputArray.map((num) => {
                         return <Boxes startingValue={num} howManyBoxes={howManyBoxes} />
