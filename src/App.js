@@ -1,12 +1,11 @@
 import { 
-  useEffect,
   useState,
 } from "react"
-import Boxes from "./Boxes"
-import './App.css';
+import Rows from './Rows'
+import './index.css';
 
 function App() {
-  const [input, setInput] = useState(0)
+  const [input, setInput] = useState(null)
 
   const handleInputChange = (event) => {
     event.preventDefault()
@@ -15,8 +14,8 @@ function App() {
 
   return(
     <div>
-      <input type='number' placeholder='type starting number here' value={input} onChange={handleInputChange}/>
-      <Boxes startingValue={input} howManyBoxes={11} />
+      <input type='number' placeholder='type table size number' value={input} onChange={handleInputChange}/>
+      <Rows startingValue={0} howManyRows={input} />
     </div>
   )
 }

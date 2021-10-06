@@ -3,20 +3,20 @@ import React from 'react'
 export default function Boxes(props) {
     const { startingValue, howManyBoxes } = props;
     let successArray = []
-    for (let i = 0; i < howManyBoxes; i++) {
+    for (let i = 0; i <= howManyBoxes; i++) {
         let product = startingValue * i
         successArray.push(product)
     }
 
     return (
         <div className="numberProducts">
-            <ul>
+            <tr>
             {
                 successArray.map((product) => {
-                    return <li className="numberCell" value={product}> {product} </li>
+                    return <td className="numberCell"> {product} </td>
                 })
             }
-            </ul>
+            </tr>
         </div>
     )
 }
