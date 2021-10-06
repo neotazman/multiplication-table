@@ -1,23 +1,24 @@
-// Your code here
 import { 
-    useEffect,
-    useState,
+  useEffect,
+  useState,
 } from "react"
-import Boxes from Boxes.js
+import Boxes from "./Boxes"
+import './App.css';
 
-export default function App() {
-    const [input, setInput] = useState(0)
+function App() {
+  const [input, setInput] = useState(0)
 
-    const handleInputChange = (event) => {
-        event.preventDefault()
-        setInput(event.target)
-    }
+  const handleInputChange = (event) => {
+    event.preventDefault()
+    setInput(event.target.value)
+  }
 
-    return(
-        <div>
-            <input type='number' value={input} onChange={handleInputChange}/>
-            <Boxes startingValue={2} howManyBoxes={11} />
-        </div>
-    )
-    
+  return(
+    <div>
+      <input type='number' placeholder='type starting number here' value={input} onChange={handleInputChange}/>
+      <Boxes startingValue={input} howManyBoxes={11} />
+    </div>
+  )
 }
+
+export default App;
