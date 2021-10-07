@@ -17,10 +17,35 @@ table { /*not working right now*/
   box-sizing: border-box;
 }
 
+tr:hover {
+  outline: 2px solid yellowgreen;
+}
+
 /*to show the cells of the table */
 td {
   outline: 1px solid black;
   height: 2vh;
   width: 2vh;
   padding: auto;
+}
+
+.numberCell:hover:nth-child(n) {
+  outline: 2px solid orange;
+}
+
+td:hover {
+  background-color: lightskyblue;
+}
+
+#firstRow {
+  background-color: goldenrod;
+}
+
+td:first-child {
+  background-color: goldenrod;
+}
+
+#x {
+  background-color: crimson;
+  color: white;
 }

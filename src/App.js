@@ -5,8 +5,8 @@ import Rows from './Rows'
 import './index.css';
 
 function App() {
-  const [boxInput, setBoxInput] = useState(11) //the column input
-  const [rowInput, setRowInput] = useState(11) //the row input
+  const [boxInput, setBoxInput] = useState(10) //the column input
+  const [rowInput, setRowInput] = useState(10) //the row input
 
   //had to make the onChange functions seperately because the other way ran into bugs
   const handleBoxChange = (event) => {
