@@ -9,14 +9,12 @@ export default function Boxes(props) { //the component that displays the individ
     }
 
     return (
-        <div className="numberProducts">
-            <tr>
+        <tr>
             { //maps an element for each value
                 successArray.map((product) => {
                     return <td className="numberCell"> {product} </td>
                 })
             }
-            </tr>
-        </div>
+        </tr>
     )
 }
