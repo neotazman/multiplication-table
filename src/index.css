@@ -29,8 +29,10 @@ td {
   padding: auto;
 }
 
-.numberCell:hover:nth-child(n) {
+/*it's more difficult to highlight classes in css, still working on it*/
+.numberCell:nth-child(.numberCell:hover) {
   outline: 2px solid orange;
+  background-color: crimson;
 }
 
 td:hover {
