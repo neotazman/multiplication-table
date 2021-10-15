@@ -13,12 +13,8 @@ code {
 }
 
 /* Write your CSS here */
-table { /*not working right now*/
+table {
   box-sizing: border-box;
-}
-
-tr:hover {
-  outline: 2px solid yellowgreen;
 }
 
 /*to show the cells of the table */
@@ -27,16 +23,6 @@ td {
   height: 2vh;
   width: 2vh;
   padding: auto;
-}
-
-/*it's more difficult to highlight classes in css, still working on it*/
-.numberCell:nth-child(.numberCell:hover) {
-  outline: 2px solid orange;
-  background-color: crimson;
-}
-
-td:hover {
-  background-color: lightskyblue;
 }
 
 #firstRow {
@@ -50,4 +36,32 @@ td:first-child {
 #x {
   background-color: crimson;
   color: white;
+}
+
+table {
+  overflow: hidden;
+}
+
+tr:hover {
+  background-color: #ffa;
+}
+
+td, th {
+  position: relative;
+}
+
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td:hover {
+  background-color: lightskyblue;
 }
