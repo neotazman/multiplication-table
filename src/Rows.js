@@ -18,7 +18,7 @@ export default function Rows(props) { //had to make separate components to rende
                     <td id='x' className='numberCell' >X</td>
                     {
                         headerArray.map((num, index) => {
-                            return <td className={index + 1} className='numberCell' >{num}</td>
+                            return <td className={index + 1} /* className='numberCell' */ >{num}</td>
                         })
                     }
                 </tr>
