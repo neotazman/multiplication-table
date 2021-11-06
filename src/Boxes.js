@@ -12,7 +12,7 @@ export default function Boxes(props) { //the component that displays the individ
         <tr>
             { //maps an element for each value
                 successArray.map((product, index) => {
-                    return <td className="numberCell" className={index} > {product} </td>
+                    return <td /* className="numberCell" */ className={index} > {product} </td>
                 })
             }
         </tr>
